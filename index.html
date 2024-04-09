@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 401</title>
+    <style>
+        @font-face {
+            font-family: 'Nexa';
+            src: url('Nexa-Heavy.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Nexa', sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: black;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #logo {
+            max-width: 200px;
+            margin-right: 20px;
+            transition: transform 1s ease;
+        }
+        #error-code-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #error-code {
+            font-size: 72px;
+            font-family: 'Nexa', sans-serif;
+            color: #264aff;
+            transition: transform 1s ease;
+        }
+        #error-description {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #252525;
+        }
+
+        #error-code-container:hover #logo,
+        #error-code-container:hover #error-code {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="error-code-container">
+        <img id="logo" src="logo2.png" alt="Logo" draggable="false">
+        <div id="error-code" draggable="false">401</div>
+    </div>
+</body>
+</html>
