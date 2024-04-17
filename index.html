@@ -50,6 +50,29 @@
         #error-code-container:hover #error-code {
             transform: scale(1.1);
         }
+
+        #x-post-container {
+            display: flex;
+            transform: scale(2.0);
+            align-items: center;
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 1s ease;
+            width: fit-content;
+        }
+
+        #x-post-container:hover {
+            transform: scale(2.2);
+        }
+
+        #x-post-container.shrink {
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 <body>
@@ -57,5 +80,13 @@
         <img id="logo" src="logo2.png" alt="Logo" draggable="false">
         <div id="error-code" draggable="false">401</div>
     </div>
+    <div id="x-post-container">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Versendity: Host and Deploy |" data-lang="en" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 </body>
+<script>
+    document.getElementById('x-post-container').addEventListener('click', function() {
+        this.classList.toggle('shrink');
+    });
+</script>
 </html>
